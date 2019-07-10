@@ -184,9 +184,8 @@ server <- function(input, output, session) {
 		data <- global_vars$test_cases[[session_vars$index]]
 		result <- str_extract(data$text, input$regex)
 		result[is.na(result)] <- ""
-		match <- result == data$found & result != ""
 		data <- data %>%
-			mutate(matched = ifelse(match,
+			mutate(matched = ifelse(result != "",
 									as.character(icon("check")),
 									as.character(icon("times"))),
 				   include = ifelse(include, 
