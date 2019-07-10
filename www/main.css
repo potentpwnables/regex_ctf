@@ -1,0 +1,18 @@
+body, .wrapper, .content-wrapper {
+	height: 100vh;
+	min-height: 100vh;
+}
+
+.sidebar-menu li span {
+	font-size: 1.1em;
+	margin-left: 1.2em;
+}
+
+#message_input {
+	margin-top: 1vh;
+	padding: 0;
+}
+
+#message_input > div {
+	width: 100%;
+}
